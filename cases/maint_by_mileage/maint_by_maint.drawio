@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-12T03:49:43.661Z" agent="5.0 (Windows)" etag="TyjrSXx8ahO2MTlLi8IW" version="20.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-12T03:53:46.534Z" agent="5.0 (Windows)" etag="XTwaQnmPCssD0KjMwCSX" version="20.2.3" type="github">
   <diagram id="-nrLwhiIJtyl0Kn61Sq1" name="Page-1">
     <mxGraphModel dx="1422" dy="1949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -83,6 +83,9 @@
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-60" value="Наряд-задание" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
           <mxGeometry x="895" y="-120" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tkotz9j5eJrCiFmji3tr-61" value="Наряд на инспекцию / диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1075" y="-120" width="50" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
