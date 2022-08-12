@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-12T04:07:30.531Z" agent="5.0 (Windows)" etag="aE4y8No6hfHNdTn3hbVc" version="20.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-12T05:17:52.771Z" agent="5.0 (Windows)" etag="_gCB5-qeRNCedtJltw2M" version="20.2.3" type="github">
   <diagram id="-nrLwhiIJtyl0Kn61Sq1" name="Page-1">
     <mxGraphModel dx="1185" dy="1819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -115,6 +115,12 @@
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-61" value="Наряд на инспекцию / диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="1101" y="-121" width="59" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="tkotz9j5eJrCiFmji3tr-78" value="Журнал запросов на обслуживание" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="340" y="390" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tkotz9j5eJrCiFmji3tr-79" value="Журнал проведенного обслуживания" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="470" y="390" width="50" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
