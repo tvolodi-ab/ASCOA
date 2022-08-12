@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-12T03:57:27.971Z" agent="5.0 (Windows)" etag="m4Imes-rh9k_BXbs-HGZ" version="20.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-12T04:07:30.531Z" agent="5.0 (Windows)" etag="aE4y8No6hfHNdTn3hbVc" version="20.2.3" type="github">
   <diagram id="-nrLwhiIJtyl0Kn61Sq1" name="Page-1">
-    <mxGraphModel dx="1422" dy="1949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="1819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -78,61 +78,43 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-55" value="Журнал показаний оборудования (пробег/км)" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="255" y="160" width="50" height="60" as="geometry" />
+          <mxGeometry x="255" y="150" width="50" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tkotz9j5eJrCiFmji3tr-56" target="tkotz9j5eJrCiFmji3tr-44">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-56" value="Правило регламента по обслуживанию" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
+        <mxCell id="tkotz9j5eJrCiFmji3tr-56" value="Правило регламента по обслуживанию" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="405" y="-110" width="50" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tkotz9j5eJrCiFmji3tr-57" target="tkotz9j5eJrCiFmji3tr-42">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-57" value="Нормы характеристик оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
+        <mxCell id="tkotz9j5eJrCiFmji3tr-57" value="Нормы характеристик оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="400" y="240" width="50" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tkotz9j5eJrCiFmji3tr-58" target="tkotz9j5eJrCiFmji3tr-40">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-58" value="Журнал формирования составов" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
+        <mxCell id="tkotz9j5eJrCiFmji3tr-58" value="Журнал формирования составов" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="545" y="-110" width="50" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tkotz9j5eJrCiFmji3tr-59" target="tkotz9j5eJrCiFmji3tr-46">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-59" value="Наряд на инспекцию/диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
+        <mxCell id="tkotz9j5eJrCiFmji3tr-59" value="Наряд на инспекцию/диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="700" y="-120" width="50" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tkotz9j5eJrCiFmji3tr-60" target="tkotz9j5eJrCiFmji3tr-48">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-60" value="Наряд-задание" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
+        <mxCell id="tkotz9j5eJrCiFmji3tr-60" value="Наряд-задание" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="895" y="-120" width="50" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tkotz9j5eJrCiFmji3tr-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tkotz9j5eJrCiFmji3tr-61" target="tkotz9j5eJrCiFmji3tr-50">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-61" value="Наряд на инспекцию / диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1075" y="-120" width="50" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-71" value="Правило регламента по обслуживанию" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="405" y="-110" width="50" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-72" value="Журнал формирования составов" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="545" y="-110" width="50" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-73" value="Наряд на инспекцию/диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="700" y="-120" width="50" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-74" value="Наряд-задание" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="895" y="-120" width="50" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-75" value="Наряд на инспекцию / диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="1075" y="-120" width="50" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tkotz9j5eJrCiFmji3tr-76" value="Нормы характеристик оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="400" y="240" width="50" height="60" as="geometry" />
+        <mxCell id="tkotz9j5eJrCiFmji3tr-61" value="Наряд на инспекцию / диагностику оборудования" style="shape=mxgraph.bpmn.data;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;whiteSpace=wrap;size=15;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1101" y="-121" width="59" height="61" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
