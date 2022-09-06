@@ -1,0 +1,136 @@
+<mxfile host="app.diagrams.net" modified="2022-08-10T05:32:35.078Z" agent="5.0 (Windows)" etag="qgBduQLn-3ngKimdcOZS" version="20.2.3" type="github">
+  <diagram id="xZS1iqDsfLLNsFTqZSFf" name="Страница 1">
+    <mxGraphModel dx="2249" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-1" value="ВУ-32" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="560" width="660" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-2" value="+Дата&#xa;+Номер вагона&#xa;+Год постройки&#xa;+Номер тележки&#xa;+Боковая рама&#xa; + Левая / правая боковая рама&#xa;  +Номер боковой рамы&#xa;  +Завод-изготовитель&#xa;  +Год изготовления&#xa;  +Размер М &quot;База боковой рамы&quot;, мм&#xa;  +Восстановление опорной поверхности, да/нет&#xa;  +Признак продления срока службы, да/нет&#xa;  +Год окончания нового срока службы&#xa;  + Клеймо организации, продлившей срок службы&#xa;+Надрессорная балка&#xa;  +Номер балки&#xa;  +Завод-изготовитель&#xa;  +Год изготовления&#xa;  +Глубина подпятника, мм&#xa;  +Диаметр подпятника, мм&#xa;  +Восстановление подпятника, да/нет&#xa;  +Признак продления срока службы, да/нет&#xa;  +Год окончания нового срока службы&#xa;  +Клеймо организации, продлившей срок&#xa;+Тележка&#xa;  +Завышение/занижение (+/-) фрикционного клина, левый, мм&#xa;  +Завышение/занижение (+/-) фрикционного клина, правый, мм&#xa;  +Суммарный продольный зазор между направляющими боковой рамы тележки и корпусом буксы, левый, мм&#xa;  +Суммарный продольный зазор между направляющими боковой рамы тележки и корпусом буксы, правый, мм&#xa;  +Суммарный поперечный зазор между направляющими боковой рамы тележки и корпусом буксы, левый, мм&#xa;  +Суммарный поперечный зазор между направляющими боковой рамы тележки и корпусом буксы, правый, мм&#xa;  +Зазор между скользунами тележки и рамы вагона, мм&#xa;  +Выполненный ремонт тележки - вид ремонта узла&#xa;Соединительная балка&#xa;&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-1">
+          <mxGeometry y="30" width="660" height="610" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-3" value="ВУ-14" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="540" y="430" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-4" value="+Месяц&#xa;+Число&#xa;+№ Поезда&#xa;+Пути&#xa;+Число вагонов&#xa;+№ вагона&#xa;+Наименование груза&#xa;+Часы + минуты предъявления к техобслуживанию&#xa;+Подпись дежурного по станции&#xa;+Подпись мастера смены&#xa;+Часы + минуты окончания технического обслуживания&#xa;+№ вагона, отцепленного от поезда&#xa;+Подпись мастера смены&#xa;+Подпись дежурного по станции&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-3">
+          <mxGeometry y="30" width="350" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-5" value="Дефектная ведомость" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="80" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-6" value="+№ вагона&#xa;+Грузоподъемность&#xa;+Материал кузова&#xa;+Дата последнего планового ремонта&#xa;+Место последнего планового ремонта&#xa;+Вид последнего планового ремонта&#xa;+Время начала ремонта Дата+время&#xa;+Время окончания ремонта Дата+время&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-5">
+          <mxGeometry y="30" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="mITxjE_Xkw7kHsZkBcQx-7" target="mITxjE_Xkw7kHsZkBcQx-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-7" value="Дефектная ведомость. Группы работ" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="170" y="280" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-8" value="+Ссылка на дефектную ведомость&#xa;+Название ходовой части" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-7">
+          <mxGeometry y="40" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="mITxjE_Xkw7kHsZkBcQx-10" target="mITxjE_Xkw7kHsZkBcQx-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-10" value="Дефектная ведомость. Работы" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="170" y="430" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-11" value="+Ссылка на группу работ&#xa;+Название работы&#xa;+Фамилия исполнителя&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-10">
+          <mxGeometry y="40" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="mITxjE_Xkw7kHsZkBcQx-13" target="mITxjE_Xkw7kHsZkBcQx-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-13" value="Дефектная ведомость. ТМЦ/Материалы/ГСМ" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="170" y="590" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-14" value="+Ссылка на группу работ&#xa;+Ссылка на справочник номенклатур ТМЦ&#xa;+Количество&#xa;+Ссылка на справочник единиц измерения&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-13">
+          <mxGeometry y="40" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-16" value="Дефектная ведомость. Подписанты" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="95" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-17" value="+Ссылка на дефектную ведомость&#xa;+Ссылка на справочник должностей&#xa;+Ссылка на справочник работников&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-16">
+          <mxGeometry y="40" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="mITxjE_Xkw7kHsZkBcQx-17" target="mITxjE_Xkw7kHsZkBcQx-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-20" value="ВУ-31" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="80" width="460" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-21" value="+№ п/п&#xa;+№ вагона&#xa;+Груженый/порожний&#xa;+№Поезда (ТР- транзитный, СФ- своего формирования&#xa;+Пути, где забракован&#xa;+Вид последнего ремонта/постройки&#xa;+Место последнего ремонта/постройки&#xa;+Дата последнего ремонта/постройки&#xa;+Наименование неисправности&#xa;+Часы работы дизель-генератора&#xa;+Кол. по трению букс&#xa;+Кол в т.ч. на роликовых подшипниках&#xa;+Кол. по прочимтехн.неисправностям&#xa;+Кол. в том числе своего формирования в парке отправления&#xa;+Время зачисления в наличие неисправных (дата + время)&#xa;+Время подачи на ремонтные пути (дата + время)&#xa;+Время начала ремонта (дата + время)&#xa;+Время снятия с наличия неисправных (дата + время)&#xa;+Время простоя в неисправн.состоянии на станционных путях&#xa;+Время простоя в неисправн.состоянии на ремонтных путях путях&#xa;+Время простоя в т.ч. в ремонте&#xa;+Общий простой.&#xa;+Дата+время документа, на основе которого вагон снят с учета неисправных&#xa;+№ документа, на основе которого вагон снят с учета неисправных&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-20">
+          <mxGeometry y="40" width="460" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-22" value="Агрегатный журнал" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="550" y="90" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="mITxjE_Xkw7kHsZkBcQx-23" value="+Узел&#xa;+ТМЦ&#xa;+Ед.измерения&#xa;+Количество&#xa;+Номер думпкара&#xa;+Ответственный&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="mITxjE_Xkw7kHsZkBcQx-22">
+          <mxGeometry y="30" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-1" value="Форма ВУ-36&#xa;Уведомление о приемке вагонов/колесных пар&#xa;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="1320" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-2" value="+№ уведомления&#xa;+Подпись начальника (ВЧД, ПТО, МВРН)&#xa;+Станция назначения&#xa;&#xa;+Подпись мастера&#xa;+Дата+время вручения уведомления&#xa;+Подпись дежурного по станции&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-1">
+          <mxGeometry y="70" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="L_cFTnBmtnNLdo1k66Zd-4" target="L_cFTnBmtnNLdo1k66Zd-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-4" value="Позиции табличной части формы ВУ-36" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1320" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-5" value="+№ п/п&#xa;+Номер вагона&#xa;+Код собственника&#xa;+Дата и время начала ремонта&#xa;+Код модернизации&#xa;+Код модернизации&#xa;+Код модернизации&#xa;+Код модернизации&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-4">
+          <mxGeometry y="70" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-7" value="Форма ВУ-50&#xa;Пересылочная ведомость&#xa;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1609" width="240" height="221" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-8" value="+№ ведомости&#xa;+№ вагона&#xa;+Дата ведомости&#xa;&#xa;+Станция и дорога отправления&#xa;+Наименование отправителя&#xa;+Станция и дорога назначения&#xa;+Наименование получателя&#xa;+Подпись мастера ВРП&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-7">
+          <mxGeometry y="70" width="240" height="151" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-9" value="Позиции табличной части формы ВУ-50" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1609" width="240" height="221" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-10" value="+№ колесной пары&#xa;+Тип колесной пары&#xa;+Состояние (неисправная, &#xa;нового формирования, &#xa;отремонтированная, &#xa;неисправная, &#xa;требуемый ремонт)&#xa;+Прейскурантная стоимость кол/пары&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-9">
+          <mxGeometry y="70" width="240" height="151" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="L_cFTnBmtnNLdo1k66Zd-10" target="L_cFTnBmtnNLdo1k66Zd-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-12" value="Форма ВУ-51&#xa;Натурный колесный листок" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1001" y="1910" width="249" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-13" value="+Вагонное депо, завод&#xa;--Приход&#xa;+Дата поступления&#xa;+№ колесной пары&#xa;+Тип&#xa;+Диаметр по кругу катания колеса&#xa;+Дата и пункт последнего формирования&#xa;+Последнего полного&#xa;освидетельствования и монтаж букс &#xa;роликовых подшипников&#xa;+Выкачена из под вагон&#xa;+Поступила от ВЧД, ВКМ, завод, ПТО&#xa;+№ пересылочной ведомости&#xa;+Состояние (исправная, нового...)&#xa;+Вид требуемого ремонта&#xa;+Дата&#xa;+Подпись мастера&#xa;&#xa;-- Расход&#xa;+Дата последнего формирования&#xa;+Пункт последнего формирования&#xa;+Дата последнего полного &#xa;освидетельствования и &#xa;монтаж букс роликовых подшипников&#xa;+Пункт последнего ...&#xa;+Израсходована под вагон №&#xa;+Отправлена в ВЧД, ВКМ, завод, ПТО&#xa;+№ пересылочной ведомости&#xa;+Вид выполненного ремонта&#xa;-- Размеры колесной пары&#xa;+Сторона колесной пары&#xa; + Правая&#xa;  +Узел&#xa;   +Параметр&#xa;+Дата выпуска с ремонта&#xa;+Подпись мастера&#xa;+Дата расхода&#xa;+Подпись производившего подкатку&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-12">
+          <mxGeometry y="70" width="249" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-15" value="ВУ 53" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1910" width="260" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-16" value="+Приход&#xa;&#xa;    +№ п/п&#xa;    +Дата поступления&#xa;    +Источник поступления колесной пары &#xa;(станция или вагон)&#xa;    +Характеристика&#xa;        +Тип&#xa;        +№ колесной пары&#xa;        +№ плавки оси&#xa;        +Дата изготовления оси&#xa;        +Пункт изготовления оси&#xa;        +Дата последнего формирования&#xa;        +Пункт последнего формирования&#xa;        +Дата последнего освидетельствования&#xa;        +Пункт послед...&#xa;        +Правое: Диаметр по кругу катания&#xa;        +Левое: Диаметр...&#xa;        +Дата отправки или подкатки под вагон&#xa;    +Назначение отправки оси &#xa;(станция или вагон)&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-15">
+          <mxGeometry y="40" width="260" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-17" value="ВУ 68 Ремонт торомозов (?)" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="995.5" y="2600" width="334.5" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-18" value="+Дата ремонта тормозов&#xa;+№ вагонов&#xa;+Тип воздухораспределителя&#xa;+№ воздухораспределителя&#xa;+Дата последнего планового ремонта&#xa;+Место последнего ремонта&#xa;+Плотность после ремонта - воздухопровода&#xa;+Плотность после ремонта - тормозной цилиндр&#xa;+Давление в тормозном цилиндре на режиме - груженый&#xa;+... среднем&#xa;+... порожнем&#xa;+Дата испытания запасного резервуара&#xa;+Подписи лиц сдающего&#xa;+Подписи лиц принимающего" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-17">
+          <mxGeometry y="40" width="334.5" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-20" value="ВУ 90 (ВУ-53 продолжение ?)" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="1910" width="400" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-21" value="+Расход&#xa; +Сторона колесной пары&#xa;    +Размеры колесной пары (мм)&#xa;        +Длина&#xa;        +Диаметр&#xa;        +В предподступичной части&#xa;        +В подступичной части&#xa;        +Посередине&#xa;        +Колеса&#xa;            +Толщина обода&#xa;            +Прокат&#xa;            +Диаметр по кругу катания&#xa;            +Расстояние м/у врутришн. гранями&#xa;+Выполненный ремонт&#xa;    +Смена оси&#xa;    +Замена цельнокатанных колес&#xa;    +Сформировано из старогодных элементов&#xa;    +Полная ревизия роликовых букс с обточкой поверхности катания&#xa;.......&#xa;    +Прочие работы&#xa;+Дата освидетельствования кол.пары&#xa;+Подписи...&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-20">
+          <mxGeometry y="40" width="400" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-22" value="Журнал испытаний запасных резерв. и главных частей" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="110" width="240" height="221" as="geometry" />
+        </mxCell>
+        <mxCell id="L_cFTnBmtnNLdo1k66Zd-23" value="+Дата&#xa;+Тип прибора (условно)&#xa;+Заводской номер прибора&#xa;+Год и месяц выпуска&#xa;+Время зарядки золотниковой камеры и запасн.резерв.1&#xa;+Время зарядки золотниковой камеры и запасн.резерв.2&#xa;+Отпуск....&#xa;&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#003300;" vertex="1" parent="L_cFTnBmtnNLdo1k66Zd-22">
+          <mxGeometry y="70" width="240" height="151" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

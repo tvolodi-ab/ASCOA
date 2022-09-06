@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2022-06-24T09:10:48.601Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36 Edg/102.0.1245.39" etag="yN_MaYRex-pCC-23r8rA" version="20.0.1" type="github">
+  <diagram id="YddccQSuvDtk1ljqOexG" name="Page-1">
+    <mxGraphModel dx="1247" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-1" value="Ж/д составы" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.window;align=left;verticalAlign=top;spacingLeft=8;strokeColor2=#008cff;strokeColor3=#c4c4c4;fontColor=#666666;mainText=;fontSize=17;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="140" y="170" width="970" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-2" value="&lt;table cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; border=&quot;1&quot; style=&quot;font-size:1em;width:100%;height:100%;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;№ п/п&lt;/th&gt;&lt;th&gt;Номер&lt;br&gt;состава&lt;/th&gt;&lt;td&gt;&lt;b&gt;Дата &lt;/b&gt;&lt;br&gt;&lt;b&gt;формирования&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Статус&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Дата &lt;br&gt;расформирования&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Количество&lt;br&gt;вагонов&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Состав 1&lt;/td&gt;&lt;td&gt;10.06.2022&lt;/td&gt;&lt;td&gt;Расформирован&lt;/td&gt;&lt;td&gt;20.06.2022&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Состав 2&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; " style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1" parent="1" vertex="1">
+          <mxGeometry x="160" y="230" width="530" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-3" value="Добавить" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#10739e;mainText=;buttonStyle=round;fontSize=12;fontStyle=1;fillColor=#b1ddf0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="160" y="200" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-4" value="Изменить" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#10739e;mainText=;buttonStyle=round;fontSize=12;fontStyle=1;fillColor=#b1ddf0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="250" y="200" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-5" value="Удалить" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#10739e;mainText=;buttonStyle=round;fontSize=12;fontStyle=1;fillColor=#b1ddf0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="340" y="200" width="91" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-6" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.navigation.scrollBar;strokeColor=#999999;barPos=100;fillColor2=#99ddff;strokeColor2=none;direction=north;fontSize=12;fontColor=#000000;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="690" y="230" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-7" value="Состав 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=12;spacingLeft=4;spacingTop=-3;strokeColor=#666666;mainText=;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="740" y="260" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-8" value="Номер состава" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="740" y="240" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-10" value="Дата формирования" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="740" y="300" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-12" value="Дата расформирования" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="940" y="300" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-13" value="10.06.2022" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.comboBox;strokeColor=#999999;fillColor=#ddeeff;align=left;fillColor2=#aaddff;mainText=;fontColor=#666666;fontSize=12;spacingLeft=3;labelBackgroundColor=#99FFFF;" parent="1" vertex="1">
+          <mxGeometry x="740" y="320" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-14" value="20.06.2022" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.comboBox;strokeColor=#999999;fillColor=#ddeeff;align=left;fillColor2=#aaddff;mainText=;fontColor=#666666;fontSize=12;spacingLeft=3;labelBackgroundColor=#99FFFF;" parent="1" vertex="1">
+          <mxGeometry x="940" y="320" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-15" value="Статус" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="940" y="240" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-16" value="Расформирован" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.comboBox;strokeColor=#999999;fillColor=#ddeeff;align=left;fillColor2=#aaddff;mainText=;fontColor=#666666;fontSize=12;spacingLeft=3;labelBackgroundColor=#99FFFF;" parent="1" vertex="1">
+          <mxGeometry x="940" y="260" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-17" value="&lt;table cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; border=&quot;1&quot; style=&quot;font-size:1em;width:100%;height:100%;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;№ п/п&lt;/th&gt;&lt;th&gt;Номер вагона&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Вагон 1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Вагон 2&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; " style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1" parent="1" vertex="1">
+          <mxGeometry x="740" y="390" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-20" value="" style="shape=ellipse;fillColor=#FF4081;strokeColor=none;shadow=1;aspect=fixed;sketch=0;labelBackgroundColor=#99FFFF;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="740" y="350" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lie4oXFveS_dUMrb-o5G-21" value="" style="dashed=0;html=1;shape=mxgraph.gmdl.plus;strokeColor=#ffffff;strokeWidth=2;shadow=0;sketch=0;labelBackgroundColor=#99FFFF;fontSize=12;fontColor=#000000;fillColor=none;" parent="Lie4oXFveS_dUMrb-o5G-20" vertex="1">
+          <mxGeometry x="10.714285714285715" y="10.714285714285715" width="8.571428571428571" height="8.571428571428571" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

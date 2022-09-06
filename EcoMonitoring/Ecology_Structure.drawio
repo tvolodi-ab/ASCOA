@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" modified="2022-07-26T08:27:02.899Z" agent="5.0 (Windows)" etag="hySMj14qPVdKimem2T5o" version="20.0.4" type="github">
+  <diagram id="cIYItfEItNQAuekIytoO" name="Page-1">
+    <mxGraphModel dx="1422" dy="1852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lrBZz7Vom6kzmI5lHfnq-2" target="lrBZz7Vom6kzmI5lHfnq-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-2" value="Pollutants" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="490" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-3" value="+Id&#xa;+Code&#xa;+Description&#xa;+EmissionSourceId&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-2">
+          <mxGeometry y="30" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-4" value="Assets" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="450" y="140" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-5" value="+Id&#xa;+Code&#xa;+Description&#xa;+EquipmentId&#xa;+SourceNumber&#xa;+LocationId&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-4">
+          <mxGeometry y="30" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-6" value="EmissionSources" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="290" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-7" value="+Id&#xa;+Code&#xa;+Description&#xa;+EquipmentId&#xa;+SourceNumber&#xa;+LocationId&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-6">
+          <mxGeometry y="30" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lrBZz7Vom6kzmI5lHfnq-7" target="lrBZz7Vom6kzmI5lHfnq-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-10" value="Locations" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-11" value="+Id&#xa;+Code&#xa;+Description&#xa;+EquipmentId&#xa;+SourceNumber&#xa;+LocationId&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-10">
+          <mxGeometry y="30" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lrBZz7Vom6kzmI5lHfnq-7" target="lrBZz7Vom6kzmI5lHfnq-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-13" value="PollutantParams" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="490" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-14" value="+Id&#xa;+Code&#xa;+Description&#xa;+PollutantId&#xa;+UoMId&#xa;+SensorId&#xa;&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-13">
+          <mxGeometry y="30" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-15" value="UnitsOfMeasures" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="630" y="455" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-16" value="+Id&#xa;+Code&#xa;+Description&#xa;+EquipmentId&#xa;+SourceNumber&#xa;+LocationId&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-15">
+          <mxGeometry y="30" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="lrBZz7Vom6kzmI5lHfnq-14" target="lrBZz7Vom6kzmI5lHfnq-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lrBZz7Vom6kzmI5lHfnq-14" target="lrBZz7Vom6kzmI5lHfnq-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-19" value="Sensors" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="630" y="720" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-20" value="+Id&#xa;+Code&#xa;+Description&#xa;+EquipmentId&#xa;+SourceNumber&#xa;+LocationId&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-19">
+          <mxGeometry y="30" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="lrBZz7Vom6kzmI5lHfnq-14" target="lrBZz7Vom6kzmI5lHfnq-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-23" value="EmissionStandards" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="710" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lrBZz7Vom6kzmI5lHfnq-24" value="+Id&#xa;+Code&#xa;+Description&#xa;+PollutantId&#xa;+Value&#xa;+UoMId&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="lrBZz7Vom6kzmI5lHfnq-23">
+          <mxGeometry y="30" width="160" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

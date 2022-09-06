@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" modified="2022-07-01T09:15:55.825Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36 Edg/103.0.1264.37" etag="nq355ED2FiX2ON8NBoHt" version="20.0.4" type="github">
+  <diagram id="El7ThqeAKEAEqX5Xljgw" name="Page-1">
+    <mxGraphModel dx="860" dy="1656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J-_hszuNko_sxPINMym0-4" value="Формирование заявки на обслуживание" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=0;startSize=20;horizontalStack=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-370" width="750" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-5" value="Механик&lt;br&gt;оборудования" style="swimlane;html=1;startSize=30;horizontal=0;" vertex="1" parent="J-_hszuNko_sxPINMym0-4">
+          <mxGeometry x="20" width="730" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-5" source="J-_hszuNko_sxPINMym0-3" target="J-_hszuNko_sxPINMym0-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-3" value="Выполнение записи в Журнале показателей оборудования" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;taskMarker=abstract;" vertex="1" parent="J-_hszuNko_sxPINMym0-5">
+          <mxGeometry x="120" y="30" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-5" source="J-_hszuNko_sxPINMym0-8" target="J-_hszuNko_sxPINMym0-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-8" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;" vertex="1" parent="J-_hszuNko_sxPINMym0-5">
+          <mxGeometry x="40" y="42.5" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-5" source="J-_hszuNko_sxPINMym0-10" target="J-_hszuNko_sxPINMym0-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-10" value="Проверка условий выполнения обслуживания" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;taskMarker=businessRule;" vertex="1" parent="J-_hszuNko_sxPINMym0-5">
+          <mxGeometry x="254" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-5" source="J-_hszuNko_sxPINMym0-12" target="J-_hszuNko_sxPINMym0-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-12" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" vertex="1" parent="J-_hszuNko_sxPINMym0-5">
+          <mxGeometry x="420" y="45" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-21" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate;" vertex="1" parent="J-_hszuNko_sxPINMym0-5">
+          <mxGeometry x="552.5" y="42.5" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-14" value="Регистрация заявки на обслуживание в Журнале заявок на обслуживание оборудования" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;taskMarker=abstract;" vertex="1" parent="J-_hszuNko_sxPINMym0-5">
+          <mxGeometry x="375" y="120" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-5" source="J-_hszuNko_sxPINMym0-12" target="J-_hszuNko_sxPINMym0-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-16" value="Требуется обслуживание" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="J-_hszuNko_sxPINMym0-15">
+          <mxGeometry x="-0.3228" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-5" source="J-_hszuNko_sxPINMym0-31" target="J-_hszuNko_sxPINMym0-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-31" value="Регистрация выполнения в Журнале заявок на обслуживание оборудования" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;taskMarker=abstract;" vertex="1" parent="J-_hszuNko_sxPINMym0-5">
+          <mxGeometry x="510" y="120" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-7" value="Планировщик" style="swimlane;html=1;startSize=30;horizontal=0;" vertex="1" parent="J-_hszuNko_sxPINMym0-4">
+          <mxGeometry x="20" y="200" width="730" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-17" value="Запуск в работу наряд-задания на обслуживание" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;taskMarker=abstract;" vertex="1" parent="J-_hszuNko_sxPINMym0-7">
+          <mxGeometry x="375" y="25" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-4" source="J-_hszuNko_sxPINMym0-14" target="J-_hszuNko_sxPINMym0-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-26" value="Производящий работы" style="swimlane;html=1;startSize=30;horizontal=0;" vertex="1" parent="J-_hszuNko_sxPINMym0-4">
+          <mxGeometry x="20" y="320" width="730" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-26" source="J-_hszuNko_sxPINMym0-27" target="J-_hszuNko_sxPINMym0-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-27" value="Выполнение наряд-задание" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;taskMarker=abstract;" vertex="1" parent="J-_hszuNko_sxPINMym0-26">
+          <mxGeometry x="375" y="25" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-28" value="Статус &quot;Закрыто&quot;" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=throwing;symbol=general;" vertex="1" parent="J-_hszuNko_sxPINMym0-26">
+          <mxGeometry x="552" y="42.5" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-4" source="J-_hszuNko_sxPINMym0-17" target="J-_hszuNko_sxPINMym0-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J-_hszuNko_sxPINMym0-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="J-_hszuNko_sxPINMym0-4" source="J-_hszuNko_sxPINMym0-28" target="J-_hszuNko_sxPINMym0-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

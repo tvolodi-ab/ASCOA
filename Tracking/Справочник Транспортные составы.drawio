@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2022-08-03T05:45:10.328Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.77" etag="tJXYuTVetoYExl0A4d_N" version="20.2.1" type="github">
+  <diagram id="qGIveaPCM2I4pOGTGOA3" name="Page-1">
+    <mxGraphModel dx="1247" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-3" value="" style="shape=mxgraph.mockup.containers.marginRect;rectMarginTop=10;strokeColor=#666666;strokeWidth=1;dashed=0;rounded=1;arcSize=5;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="40" width="819" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-4" value="Карточка состава" style="shape=rect;strokeColor=none;fillColor=#008cff;strokeWidth=1;dashed=0;rounded=1;arcSize=20;fontColor=#ffffff;fontSize=17;spacing=2;spacingTop=-2;align=left;autosize=1;spacingLeft=4;resizeWidth=0;resizeHeight=0;perimeter=none;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-48" value="&lt;table cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; border=&quot;1&quot; style=&quot;font-size:1em;width:100%;height:100%;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;№ п/п&lt;/th&gt;&lt;td&gt;&lt;b&gt;Тип&lt;/b&gt;&lt;/td&gt;&lt;th&gt;Название единицы&lt;/th&gt;&lt;td&gt;&lt;b&gt;Рег.номер&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Локомотив&lt;/td&gt;&lt;td&gt;Локомотив ЛК 0001&lt;/td&gt;&lt;td&gt;Л-23001&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Вагон&lt;/td&gt;&lt;td&gt;Вагон 12-508&lt;/td&gt;&lt;td&gt;В-23123&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Вагон&lt;/td&gt;&lt;td&gt;Вагон 12-508&lt;br&gt;&lt;/td&gt;&lt;td&gt;В-23124&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;Вагон&lt;/td&gt;&lt;td&gt;Вагон 12-508&lt;br&gt;&lt;/td&gt;&lt;td&gt;В-23125&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;Вагон&lt;/td&gt;&lt;td&gt;Вагон 12-508&lt;br&gt;&lt;/td&gt;&lt;td&gt;В-23126&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; " style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="8.75" y="215" width="562.5" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-49" value="AB000001" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;strokeColor=#666666;mainText=" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="24" y="100" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-50" value="Код" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;verticalAlign=middle;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="23" y="80" width="36" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-51" value="Состав № 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;strokeColor=#666666;mainText=" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="26" y="170" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-52" value="Описание" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;verticalAlign=middle;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="25" y="150" width="66" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-53" value="Id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;verticalAlign=middle;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="25" y="50" width="36" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-55" value="47e42c9c-71cd-4c37-8d1f-446863563341" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;verticalAlign=middle;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="50" y="50" width="248" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-57" value="Сохранить" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=15;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="410" y="520" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-58" value="Вернуть" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=15;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="193.75" y="520" width="136.25" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-59" value="Добавить" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=15;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="337" y="170" width="106.25" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-60" value="Удалить" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=15;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-3">
+          <mxGeometry x="458" y="170" width="113.25" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-44" value="" style="shape=mxgraph.mockup.containers.marginRect;rectMarginTop=10;strokeColor=#666666;strokeWidth=1;dashed=0;rounded=1;arcSize=5;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="40" width="490" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-45" value="Составы - Список" style="shape=rect;strokeColor=none;fillColor=#008cff;strokeWidth=1;dashed=0;rounded=1;arcSize=20;fontColor=#ffffff;fontSize=17;spacing=2;spacingTop=-2;align=left;autosize=1;spacingLeft=4;resizeWidth=0;resizeHeight=0;perimeter=none;" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-44">
+          <mxGeometry x="5" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-70" value="&lt;table cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; border=&quot;1&quot; style=&quot;font-size:1em;width:100%;height:100%;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;№ п/п&lt;/th&gt;&lt;td&gt;&lt;b&gt;Id&lt;/b&gt;&lt;/td&gt;&lt;th&gt;Код состава&lt;/th&gt;&lt;td&gt;&lt;b&gt;Описание&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;47e42c9c-71cd-4c37-8d1f-446863563341&lt;/td&gt;&lt;td&gt;Локомотив ЛК 0001&lt;/td&gt;&lt;td&gt;Л-23001&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;47e42c9c-71cd-4c37-8d1e-446863563341&lt;br&gt;&lt;/td&gt;&lt;td&gt;Вагон 12-508&lt;/td&gt;&lt;td&gt;В-23123&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; " style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1" vertex="1" parent="QsTzf2EE-cCvm9q_H36Z-44">
+          <mxGeometry x="10" y="70" width="480" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QsTzf2EE-cCvm9q_H36Z-46" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.forms.splitter;strokeColor=#999999;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="500" y="50" width="10" height="580" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
