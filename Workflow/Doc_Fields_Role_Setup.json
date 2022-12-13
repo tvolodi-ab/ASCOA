@@ -1,0 +1,18 @@
+{
+    "DocType": "WorkOrder",
+    "WorkflowType": "Inspection",
+    "States":[
+        {
+            "State": "Draft",
+            "Roles":[
+                {
+                    "Function": "Read"
+                }
+                
+            ]
+            
+
+        }
+    ]
+    
+}
