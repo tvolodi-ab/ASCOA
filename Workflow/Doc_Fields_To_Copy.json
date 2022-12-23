@@ -1,0 +1,38 @@
+{
+    "WorkflowTypesId": "@copy",
+    "WorkflowTypes": "@copy",
+    "DocTypesId": "@copy",
+    "DocTypes": "@copy",
+    "Doc": {
+        "AssetClassId": "@copy",
+        "AssetClass": "@copy",
+        "AssetId": "@copy",
+        "Asset": "@copy",
+        "TypeOfMaintenanceId": "@copy",
+        "TypeOfMaintenance": "@copy",
+        "DocTypes": "@copy",
+        "DocTypesCode": "@copy",
+        "WorkflowTypes": "@copy",
+        "WorkflowTypesDescription": "@copy",
+        "DocStatuses": "@copy",
+        "DocStatusesDescription": "@copy",
+        "Description": "@copy",
+        "OrgUnitId": "@copy",
+        "PriorityId": "@copy",
+        "WorkIssuerUserId": "@copy",
+        "WorkResponsibleUserId": "@copy",
+        "WorkTeamId": "@copy",
+        "LocationId": "@copy",
+        "tasks": {
+            "Description": "@copy",
+            "Asset": "@copy",
+            "Location": "@copy",
+            "IsAttachmentRequired": "@copy",
+            "IsEquipmentNotesRequired": "@copy",
+            "LineNr": "@copy",            
+            "PlannedDuration": "@copy",
+            "Inspections": {                
+                },        
+            }
+        }
+}
