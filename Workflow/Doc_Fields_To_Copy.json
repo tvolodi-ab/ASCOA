@@ -32,7 +32,7 @@
             "LineNr": "@copy",            
             "PlannedDuration": "@copy",
             "Inspections": {                
-                },        
+                }
             }
         }
 }
