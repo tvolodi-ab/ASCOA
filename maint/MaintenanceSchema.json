@@ -1,0 +1,19 @@
+{
+    "SchemaType" : "PERIOD/READINGS",
+    "WorkingDays" : true,
+    "MaintenanceTypes" : [
+        {
+            "MaintenanceTypeId" : "^TypesOfMaintenance",
+            "EqReadingsStandardId" : "^EqReadingsStandardId",
+            "StartingPoint": [
+                "....",
+                "...."
+            ],
+            "Includes": [
+                "....",
+                "...."
+            ],
+            "ExecDocumentTemplate" : "^ExecDocumentTemplate"
+        }
+    ]
+}
