@@ -1,0 +1,56 @@
+{
+    "WorkflowTypesId": "@copy",
+    "WorkflowTypes": "@copy",
+    "DocTypesId": "@copy",
+    "DocTypes": "@copy",
+    "Doc": {
+        "AssetClassId": "@copy",
+        "AssetClass": "@copy",
+        "AssetId": "@copy",
+        "Asset": "@copy",
+        "TypeOfMaintenanceId": "@copy",
+        "TypeOfMaintenance": "@copy",
+        "DocTypes": "@copy",
+        "DocTypesCode": "@copy",
+        "WorkflowTypes": "@copy",
+        "WorkflowTypesDescription": "@copy",
+        "Description": "@copy",
+        "OrgUnitId": "@copy",
+        "PriorityId": "@copy",
+        "WorkIssuerUserId": "@copy",
+        "WorkResponsibleUserId": "@copy",
+        "WorkTeamId": "@copy",
+        "LocationId": "@copy",
+        "tasks": {
+            "Description": "@copy",
+            "Asset": "@copy",
+            "Location": "@copy",
+            "IsAttachmentRequired": "@copy",
+            "IsEquipmentNotesRequired": "@copy",
+            "LineNr": "@copy",            
+            "PlannedDuration": "@copy",
+            "Inspections": {
+                "LineNr": "@copy",
+                "DefectNote": "@copy"                
+            },
+            "Measures": {
+                "ReadingType": "@copy",
+                "uom": "@copy"
+            },
+            "Materials": {
+                "NomenclatureId": "@copy",
+                "Nomenclature": "@copy",
+                "UnitOfMeasureId": "@copy",
+                "UnitOfMeasure": "@copy",
+                "StdQnt": "@copy"
+            },
+            "WorkTeam": {
+                "UserId": "@copy",
+                "PositionId": "@copy",
+                "LineNr": 1,
+                "User": "@copy",
+                "Position": "@copy"
+            }
+        }
+    }
+}
