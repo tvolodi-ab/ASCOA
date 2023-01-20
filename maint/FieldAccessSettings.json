@@ -1,0 +1,32 @@
+{
+    "DocType": "WorkOrder",
+    "WorkflowType": "Inspection",
+    "Statuses":[
+        {
+            "Status": "Draft",
+            "Roles":[
+                {
+                    "RoleName": "Planner",
+                    "FieldAccesses": {
+                        "AllFields": "N",
+                        "WorkflowTypes": "U",
+                        "DocTypes": "N",
+                        "Doc": {
+                            "AllFields": "R",
+                            "AssetClass": "U",
+                            "Asset": "U",
+                            "TypeOfMaintenance": "R",
+                            "tasks": {
+                                "AllFields": "R",
+                                "Description": "U",
+                                "Inspections": {
+                                    "AllFields": "R"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }    
+        ]
+    }

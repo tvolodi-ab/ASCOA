@@ -1,0 +1,99 @@
+{
+    "Id": "88ddda08-2215-414d-8af0-5a8e1b239745",
+    "DocBody": null,
+    "Doc": {
+        "JobId": "88ddda08-6512-446a-8581-1a610da2815d",
+        "AssetClassId": "daabd808-80f6-48f7-8348-bf6678f418d3",
+        "AssetId": "acb6d708-461f-423f-8a1b-c7b38689b187",
+        "TypeOfMaintenanceId": "3514d908-9225-4cfd-8593-6bb4634517a3",
+        "AssetClass": "TestClass01",
+        "Asset": "Timberk-77",
+        "TypeOfMaintenance": "TestMaintenance231",
+        "DocTypesCode": "Наряд-задание",
+        "WorkflowTypesDescription": "21",
+        "DocStatusesDescription": "Закрыто",
+        "Description": "hhft",
+        "OrgUnitId": 2,
+        "PriorityId": "0216da08-9c6f-40d1-8d1b-2c7fdcfefbe1",
+        "WorkIssuerUserId": 2,
+        "WorkResponsibleUserId": 3,
+        "WorkTeamId": 4,
+        "LocationId": 3,
+        "ScheduledStartOn": "2022-12-14T04:19:54Z",
+        "FinishedStartOn": "2022-12-14T05:19:54Z",
+        "tasks": [
+            {
+                "Description": "rewr",
+                "Asset": "acb6d708-461f-423f-8a1b-c7b38689b187",
+                "Location": 55,
+                "PlannedStartDate": "2022-12-14T05:21:40Z",
+                "PlannedFinishDate": "2022-12-14T08:21:40.245Z",
+                "PlannedDuration": null,
+                "ActualStartDate": "2022-12-14T06:21:40.248Z",
+                "ActualFinishDate": "2022-12-14T08:21:40.249Z",
+                "ActualDuration": null,
+                "IsAttachmentRequired": true,
+                "IsCheckListRequired": true,
+                "LineNr": 1,
+                "Id": "8addda08-f4c2-4d50-8f66-acb770e1d1cf",
+                "Status": "Check",
+                "Inspections": [
+                    {
+                        "IsDone": true,
+                        "IsInNorm": true,
+                        "InspectionNote": "dasda",
+                        "DefectType": "3",
+                        "DefectNote": "ewq",
+                        "DefectResolutionNote": "ewqe",
+                        "DefectQnt": 23,
+                        "Id": "3e02fe2a-7bd9-4fb1-a71b-c037d697f65c",
+                        "LineNr": 3
+                    }
+                ]
+            },
+            {
+                "ActualStartDate": "2022-12-14T04:26:22Z",
+                "ActualFinishDate": "2022-12-14T04:26:22Z",
+                "PlannedFinishDate": "2022-12-14T04:26:22Z",
+                "PlannedStartDate": "2022-12-14T04:26:22Z",
+                "Description": "Nurym",
+                "Asset": "acb6d708-461f-423f-8a1b-c7b38689b187",
+                "Location": 15,
+                "PlannedDuration": 0,
+                "ActualDuration": 0,
+                "IsCheckListRequired": true,
+                "IsAttachmentRequired": true,
+                "LineNr": 2,
+                "Id": "8bddda08-1563-4a44-88fd-c60a651b8457",
+                "Status": "Check",
+                "Inspections": [
+                    {
+                        "IsDone": null,
+                        "IsInNorm": true,
+                        "InspectionNote": "dasd",
+                        "DefectType": "4db44a78-f8fe-4faa-ac9e-c1c27b07e68e",
+                        "DefectNote": "das",
+                        "DefectResolutionNote": "2312",
+                        "DefectQnt": 23,
+                        "LineNr": 1,
+                        "DefectTypeDescription": {
+                            "Id": "4db44a78-f8fe-4faa-ac9e-c1c27b07e68e",
+                            "Code": "3",
+                            "AssetClassId": "e1abd808-78b1-4eaa-816f-54ff14c4b6f0",
+                            "Description": "3",
+                            "ExtDescription": "T3"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "DocTypes": null,
+    "DocNumber": "123465",
+    "DocDate": "2022-12-13T22:02:30Z",
+    "DocStatuses": null,
+    "WorkflowTypes": null,
+    "DocTypesId": "83d3bf45-ea7f-4a6d-bb9f-7d3091c1c9ca",
+    "DocStatusesId": "82f0fea9-ac2c-4a3d-ac8b-05e5e705cce2",
+    "WorkflowTypesId": "073c5d43-daa7-4dea-be4a-f27d2d0afde3"
+}
