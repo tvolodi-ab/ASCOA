@@ -1,10 +1,13 @@
 {
-    "SchemaType" : "PERIOD/READINGS",
-    "WorkingDays" : true,
     "MaintenanceTypes" : [
         {
             "MaintenanceTypeId" : "^TypesOfMaintenance",
             "EqReadingsStandardId" : "^EqReadingsStandardId",
+            "PeriodType": "month, (year, day, hour)",
+            "PeriodValue": 1,
+            "WorkingDays" : true,
+            "ResourceConflictResolveMethod": "next_day (next_period, break,)",
+            "MaxResolveCount" : 5,
             "StartingPoint": [
                 "....",
                 "...."
@@ -13,6 +16,7 @@
                 "....",
                 "...."
             ],
+            "Priority": 1,
             "ExecDocumentTemplate" : "^ExecDocumentTemplate"
         }
     ]
