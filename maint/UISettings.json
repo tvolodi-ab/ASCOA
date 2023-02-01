@@ -1,0 +1,16 @@
+{
+    "QuickAccessTab": [
+        {
+            "Role": "master",
+            "Tab": "materials"
+        },
+        {
+            "Role": "foreman",
+            "Tab": "materials"
+        },
+        {
+            "Role": "defectologist",
+            "Tab": "inspections"
+        }
+    ]
+}

@@ -37,19 +37,27 @@
                 "LineNr": 1,
                 "Id": "8addda08-f4c2-4d50-8f66-acb770e1d1cf",
                 "Status": "Check",
-                "Inspections": [
-                    {
-                        "IsDone": true,
-                        "IsInNorm": true,
-                        "InspectionNote": "dasda",
-                        "DefectType": "3",
-                        "DefectNote": "ewq",
-                        "DefectResolutionNote": "ewqe",
-                        "DefectQnt": 23,
-                        "Id": "3e02fe2a-7bd9-4fb1-a71b-c037d697f65c",
-                        "LineNr": 3
-                    }
-                ]
+                "Inspections": {
+                    "Inspections": [
+                        {
+                            "IsDone": true,
+                            "IsInNorm": true,
+                            "InspectionNote": "dasda",
+                            "DefectType": "3",
+                            "DefectNote": "ewq",
+                            "DefectResolutionNote": "ewqe",
+                            "DefectQnt": 23,
+                            "Id": "3e02fe2a-7bd9-4fb1-a71b-c037d697f65c",
+                            "LineNr": 3
+                        }
+                    ],
+                    "ResolutionNote": "Оборудование обследовано",
+                    "Expert": {
+                        "UserId": 123,
+                        "UserName": "Фамилия Имя Отчество"
+                    },
+                    "Approved": false
+                }
             },
             {
                 "ActualStartDate": "2022-12-14T04:26:22Z",
