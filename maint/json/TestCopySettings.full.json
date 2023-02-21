@@ -1,1 +1,83 @@
-{ "WorkflowTypesId": "@copy", "WorkflowTypes": "@copy", "DocTypesId": "@copy", "DocTypes": "@copy", "DocStatuses": "@copy", "DocStatusesId": "@copy", "DocNumber": "@copy", "Doc": { "AssetClassId": "@copy", "AssetClass": "@copy", "AssetId": "@copy", "Asset": "@copy", "TypeOfMaintenanceId": "@copy", "TypeOfMaintenance": "@copy", "DocTypes": "@copy", "DocTypesCode": "@copy", "WorkflowTypes": "@copy", "WorkflowTypesDescription": "@copy", "Description": "@copy", "OrgUnitId": "@copy", "PriorityId": "@copy", "WorkIssuerUserId": "@copy", "WorkResponsibleUserId": "@copy", "WorkTeamId": "@copy", "LocationId": "@copy", "tasks": { "Description": "@copy", "Asset": "@copy", "Location": "@copy", "IsAttachmentRequired": "@copy", "IsEquipmentNotesRequired": "@copy", "LineNr": "@copy", "PlannedDuration": "@copy", "Inspections": { "LineNr": "@copy", "DefectNote": "@copy", "DefectResolutionNote": "@copy", "DefectQnt": "@copy", "DefectType": "@copy", "InspectionNote": "@copy", "IsDone": "@copy", "IsInNorm": "@copy" }, "Measures": { "ReadingType": "@copy", "uom": "@copy", "ComparisonType": "@copy", "ComparisonTypeName": "@copy", "LineNr": "@copy", "MaxValue": "@copy", "MinValue": "@copy", "ReadingsValue": "@copy" }, "Materials": { "NomenclatureId": "@copy", "Nomenclature": "@copy", "UnitOfMeasureId": "@copy", "UnitOfMeasure": "@copy", "TaskId": "@copy", "StdQnt": "@copy", "Qnt": "@copy" }, "WorkTeam": { "UserId": "@copy", "User": "@copy", "QualificationId": "@copy", "Qualification": "@copy", "PositionId": "@copy", "LineNr": 1, "Position": "@copy" }, "TaskTracking": { "UserId": "@copy", "User": "@copy", "StartDate": "@copy", "Status": "@copy", "FinishDate": "@copy", "Time": "@copy" } } } }
+{
+    "WorkflowTypesId": "@copy",
+    "WorkflowTypes": "@copy",
+    "DocTypesId": "@copy",
+    "DocTypes": "@copy",
+    "DocStatuses": "@copy",
+    "DocStatusesId": "@copy",
+    "DocNumber": "@copy",
+    "Doc": {
+        "AssetClassId": "@copy",
+        "AssetClass": "@copy",
+        "AssetId": "@copy",
+        "Asset": "@copy",
+        "TypeOfMaintenanceId": "@copy",
+        "TypeOfMaintenance": "@copy",
+        "DocTypes": "@copy",
+        "DocTypesCode": "@copy",
+        "WorkflowTypes": "@copy",
+        "WorkflowTypesDescription": "@copy",
+        "Description": "@copy",
+        "OrgUnitId": "@copy",
+        "PriorityId": "@copy",
+        "WorkIssuerUserId": "@copy",
+        "WorkResponsibleUserId": "@copy",
+        "WorkTeamId": "@copy",
+        "LocationId": "@copy",
+        "tasks": {
+            "Description": "@copy",
+            "Asset": "@copy",
+            "Location": "@copy",
+            "IsAttachmentRequired": "@copy",
+            "IsEquipmentNotesRequired": "@copy",
+            "LineNr": "@copy",
+            "PlannedDuration": "@copy",
+            "Inspections": {
+                "LineNr": "@copy",
+                "DefectNote": "@copy",
+                "DefectResolutionNote": "@copy",
+                "DefectQnt": "@copy",
+                "DefectType": "@copy",
+                "InspectionNote": "@copy",
+                "IsDone": "@copy",
+                "IsInNorm": "@copy"
+            },
+            "Measures": {
+                "ReadingType": "@copy",
+                "uom": "@copy",
+                "ComparisonType": "@copy",
+                "ComparisonTypeName": "@copy",
+                "LineNr": "@copy",
+                "MaxValue": "@copy",
+                "MinValue": "@copy",
+                "ReadingsValue": "@copy"
+            },
+            "Materials": {
+                "NomenclatureId": "@copy",
+                "Nomenclature": "@copy",
+                "UnitOfMeasureId": "@copy",
+                "UnitOfMeasure": "@copy",
+                "TaskId": "@copy",
+                "StdQnt": "@copy",
+                "Qnt": "@copy"
+            },
+            "WorkTeam": {
+                "UserId": "@copy",
+                "User": "@copy",
+                "QualificationId": "@copy",
+                "Qualification": "@copy",
+                "PositionId": "@copy",
+                "LineNr": 1,
+                "Position": "@copy"
+            },
+            "TaskTracking": {
+                "UserId": "@copy",
+                "User": "@copy",
+                "StartDate": "@copy",
+                "Status": "@copy",
+                "FinishDate": "@copy",
+                "Time": "@copy"
+            }
+        }
+    }
+}
