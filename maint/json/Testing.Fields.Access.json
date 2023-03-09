@@ -1,0 +1,123 @@
+[
+    {
+        "DocType": "WORK_ORDER",
+        "WorkflowType": "DUMPCAR_TI1",
+        "Statuses": [
+            {
+                "Status": "IN_PLANNING",
+                "Roles": [
+                    {
+                        "RoleName": "Admin (просмотр всех ОС включен)",
+                        "FieldAccesses": {
+                            "AllFields": "U",
+                            "WorkflowTypes": "U",
+                            "Doc": {
+                                "AllFields": "U",
+								"DocStatuses": "U",
+                                "tasks": {
+                                    "AllFields": "U"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "Status": "TO_EXECUTION",
+                "Roles": [
+                    {
+                        "RoleName": "Admin (просмотр всех ОС включен)",
+                        "FieldAccesses": {
+                            "AllFields": "R",
+							"DocStatuses": "U",
+							"DocStatusesId": "U",							
+                            "Doc": {
+                                "AllFields": "R",
+                                "tasks": {
+                                    "AllFields": "R",
+                                    "Description": "R",
+                                    "Inspections": {
+                                        "AllFields": "U"
+                                    },
+                                    "Photo": "U"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "Status": "IN_PROGRESS",
+                "Roles": [
+                    {
+                        "RoleName": "Admin (просмотр всех ОС включен)",
+                        "FieldAccesses": {
+                            "AllFields": "R",
+                            "WorkflowTypes": "U",
+                            "DocTypes": "U",
+                            "Doc": {
+                                "AllFields": "R",
+                                "tasks": {
+                                    "AllFields": "R",
+                                    "Description": "R",
+                                    "Inspections": {
+                                        "AllFields": "R"
+                                    },
+                                    "Photo": "R"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "Status": "COMPLETED",
+                "Roles": [
+                    {
+                        "RoleName": "Admin (просмотр всех ОС включен)",
+                        "FieldAccesses": {
+                            "AllFields": "R",
+                            "WorkflowTypes": "U",
+                            "DocTypes": "U",
+                            "Doc": {
+                                "AllFields": "R",
+                                "tasks": {
+                                    "AllFields": "R",
+                                    "Description": "R",
+                                    "Inspections": {
+                                        "AllFields": "R"
+                                    },
+                                    "Photo": "R"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "Status": "CLOSED",
+                "Roles": [
+                    {
+                        "RoleName": "Admin (просмотр всех ОС включен)",
+                        "FieldAccesses": {
+                            "AllFields": "R",
+                            "WorkflowTypes": "U",
+                            "DocTypes": "U",
+                            "Doc": {
+                                "AllFields": "R",
+                                "tasks": {
+                                    "AllFields": "R",
+                                    "Description": "R",
+                                    "Inspections": {
+                                        "AllFields": "R"
+                                    },
+                                    "Photo": "R"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
