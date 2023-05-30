@@ -1,0 +1,20 @@
+[{"data":{"TID":"e2003412013af800056f8a4e060c00f300055ffbffffdc60","antenna":1,"eventNum":14400,"format":"epc","idHex":"ae2f35714d3a48b18a305236","peakRssi":-58,"reads":425,"userDefined":"84:24:8D:FB:6B:B0"},"timestamp":"2023-05-18T15:37:49.082+0600","type":"INVENTORY"}]
+
+[
+   {
+      "data":{
+         "TID":"e2003412013af800056f8a4e060c00f300055ffbffffdc60",
+         "antenna":1,
+         "eventNum":14400,
+         "format":"epc",
+         "idHex":"ae2f35714d3a48b18a305236",
+         "peakRssi":-58,
+         "reads":425,
+         "userDefined":"84:24:8D:FB:6B:B0"
+      },
+      "timestamp":"2023-05-18T15:37:49.082+0600",
+      "type":"INVENTORY"
+   }
+]
+
+[{"data":{"CRC":"bb3d","PC":"3000","TID":"e20034120135f800056f8bd3070e00f000055ffbffffdc50","USER":"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","antenna":1,"channel":867.5,"eventNum":86,"format":"epc","idHex":"e20020755908011313508bd3","peakRssi":-47,"phase":0.0,"reads":355,"userDefined":"84:24:8D:FB:6B:B0"},"timestamp":"2023-05-18T16:12:45.266+0600","type":"INVENTORY"}]
