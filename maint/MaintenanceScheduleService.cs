@@ -213,35 +213,40 @@ namespace InfrastructureAppCore.Service
             var procInfoList = new List<ScheduledWorkProInfos>();
             foreach (var item in scheduledWorksForAssets)
             {
+                
                 foreach (var scheduledWorkI in item.Value)
                 {
-                    var procInfo = new ScheduledWorkProInfos
-                    {
-                        ScheduledWorkId = scheduledWorkI.Id,
-                        AssetId = (Guid)scheduledWorkI.AssetId,
-                        ProcDT = DateTime.Now,
-                        ProcResult = 0,
-                        ProcInfo = string.Empty
-                    };
-
+                    ScheduledWorkProInfos procInfo = null;
                     try
                     {
+                        procInfo = new ScheduledWorkProInfos
+                        {
+                            ScheduledWorkId = scheduledWorkI.Id,
+                            AssetId = (Guid)item.Key,
+                            ProcDT = DateTime.Now,
+                            ProcResult = 0,
+                            ProcInfo = string.Empty
+                        };
+
                         procInfoList.Add(procInfo);
                         await _scheduledWorkProcInfosRepo.AddAsync(procInfo);
-                    }
-                    catch (Exception ex)
+                    } catch (Exception ex)
                     {
+                        Console.WriteLine(ex.ToString());
                         procInfo.ProcInfo = ex.Message;
                         await _scheduledWorkProcInfosRepo.AddAsync(procInfo);
-                    } // try-catch для обработки ошибок при добавлении записей, поля ProcInfo в таблицу ScheduledWorkProcInfos
+
+                    }
                 }
             }
             await _unitOfWork.CommitAsync();
 
-            procInfoList.ForEach(async procInfo =>
+            HashSet<Guid> processedAssetGuids = new HashSet<Guid>();
+            foreach (var procInfo in procInfoList)
             {
+                
                 // If asset is processed then continue.
-                if (procInfo.ProcResult > 1) return;
+                if (processedAssetGuids.Where(guid => guid == procInfo.AssetId).Any()) return;
 
                 var assetId = procInfo.AssetId;
                 var workId = procInfo.ScheduledWorkId;
@@ -252,8 +257,9 @@ namespace InfrastructureAppCore.Service
                                             .ToListAsync();
 
                 Dictionary<ScheduledWork, DateTimeOffset?> lastWorkDateDict = new Dictionary<ScheduledWork, DateTimeOffset?>();
+
                 // Looking for the last accomplished work
-                worksInfoForAsset.ForEach(async work =>
+                foreach(var work in worksInfoForAsset)
                 {
                     var scheduleWork = await _infrastructureEntities
                         .ScheduledWorks
@@ -277,7 +283,7 @@ namespace InfrastructureAppCore.Service
                         lastWorkDateDict[scheduleWork] = null;
                     }
 
-                });
+                }
 
                 // The last datetime:
                 var lastMaintWork = lastWorkDateDict.Aggregate((curr, next) => curr.Value > next.Value ? curr : next).Key;
@@ -438,7 +444,9 @@ namespace InfrastructureAppCore.Service
                     await _repo.AddAsync(maintenanceSchedule);
                 }
                 await _unitOfWork.CommitAsync();
-            });
+
+                processedAssetGuids.Add(assetId);
+            };
 
             }
 
