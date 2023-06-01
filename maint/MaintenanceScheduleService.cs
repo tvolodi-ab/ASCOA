@@ -137,7 +137,8 @@ namespace InfrastructureAppCore.Service
             // Clear processing info for the new session
             try
             {
-                foreach (var item in unprocessedWorks)
+                var processedWorks = _scheduledWorkProcInfosRepo.GetAll().Where(x => x.ProcResult == 1).ToList();
+                foreach (var item in processedWorks)
                 {
                     await _scheduledWorkProcInfosRepo.DeleteAsync(item);
                 }
@@ -271,231 +272,312 @@ namespace InfrastructureAppCore.Service
             HashSet<Guid> processedAssetGuids = new HashSet<Guid>();
             foreach (var procInfo in procInfoList)
             {
-                
+
                 // If asset is processed then continue.
-                if (processedAssetGuids.Where(guid => guid == procInfo.AssetId).Any()) return;
+                if (processedAssetGuids.Where(guid => guid == procInfo.AssetId).Any()) continue;
 
                 var assetId = procInfo.AssetId;
                 // var workId = procInfo.ScheduledWorkId;
 
                 var worksInfoForAsset = await _infrastructureEntities
                                             .ScheduledWorkProInfos
-                                            .Where(info => info.AssetId == assetId)
+                                            .Where(info => info.AssetId == assetId && info.IsRemoved == false)
                                             .ToListAsync();
 
-                Dictionary<ScheduledWork, DateTimeOffset?> lastWorkDateDict = new Dictionary<ScheduledWork, DateTimeOffset?>();
-
-                // Looking for the last accomplished work
-                foreach(var work in worksInfoForAsset)
-                {
-                    var scheduleWork = await _infrastructureEntities
-                        .ScheduledWorks
-                        .Where(sw => sw.Id == work.ScheduledWorkId)
-                        .FirstOrDefaultAsync();
-
-                    // Get last maintenance from the maintenance journal
-                    var lastMaintenance = await _infrastructureEntities.EqMaintJournal
-                        .Where(x => x.ScheduledWorkId == work.ScheduledWorkId && x.AssetId == assetId)
-                        .OrderByDescending(x => x.MaintDoneDateTime)
-                        //.Select(x => x.ScheduledWorkId)
-                        //.Distinct()
-                        .FirstOrDefaultAsync();
-
-                    if (lastMaintenance != null)
-                    {
-                        lastWorkDateDict[scheduleWork] = lastMaintenance.MaintDoneDateTime;
-                    } else
-                    {
-                        // No maintenance yet
-                        lastWorkDateDict[scheduleWork] = DateTimeOffset.Now;
-                    }
-
-                }
+                var lastWorkDateDict = await GetLastMaitenances(assetId, worksInfoForAsset);
 
                 // The last datetime:
                 var lastMaintWork = lastWorkDateDict.Aggregate((curr, next) => curr.Value > next.Value ? curr : next).Key;
                 var lastMaintDateTime = lastWorkDateDict[lastMaintWork];
 
+                // Check for there is no maintenance at all. In such case build the schedule from current time.
+                if(lastMaintDateTime.Value.CompareTo(DateTimeOffset.MinValue) == 0)
+                {
+                    lastMaintDateTime = DateTimeOffset.Now;
+                }                     
+
                 // DateTimes for schedule begining.
-                Dictionary<ScheduledWork, DateTimeOffset?> scheduleStartDateDict =
-                    new Dictionary<ScheduledWork, DateTimeOffset?>();
+                //Dictionary<ScheduledWork, DateTimeOffset?> scheduleStartDateDict =
+                //    new Dictionary<ScheduledWork, DateTimeOffset?>();
 
-                Dictionary<int, Dictionary<string, ScheduledWork>> schedulesBySeriality =
-                    new Dictionary<int, Dictionary<string, ScheduledWork>>();
-
+                // TODO: replace with parameter for the final scheduling time
                 var finalDateForPlanning = DateTimeOffset.Now.AddYears(1);
 
-                // Processing from the lesser seriality to bigger.
-                lastWorkDateDict = lastWorkDateDict.OrderBy(w => w.Key.Seriality).ToDictionary(w => w.Key, w => w.Value);
-                int minimalSeriality = 0;
-                List<int> serialityList = new List<int>();
+                var (shiftedSchedule, durationByScheduleWork) = await BuildSchedule(lastWorkDateDict,
+                                    lastMaintWork,
+                                    lastMaintDateTime,
+                                    assetId,
+                                    finalDateForPlanning
+                                    //,schedulesBySeriality
+                                    );
 
-                foreach (var pair in lastWorkDateDict)
-                {
+                await RegisterResults(assetId, shiftedSchedule, durationByScheduleWork);
 
-                    var scheduleWork = pair.Key;
-                    var seriality = scheduleWork.Seriality;
-                    if (minimalSeriality == 0) minimalSeriality = seriality;
-                    serialityList.Add(seriality);
-                    if (seriality <= lastMaintWork.Seriality)
-                    {
-                        // scheduleStartDateDict[scheduleWork] = lastMaintDateTime;
-                        TimeSpan schedulingPeriod = await GetPeriodByReadings(assetId
-                                                            , scheduleWork.ReadingTypeId
-                                                            , scheduleWork.ReadingsValue
-                                                            );
-                        if (schedulingPeriod == default) continue;
-
-                        Dictionary<string, ScheduledWork> schedule = new Dictionary<string, ScheduledWork>();
-                        DateTimeOffset runningScheduleDate = (DateTimeOffset)lastMaintDateTime;
-                        do
-                        {
-                            runningScheduleDate = (DateTimeOffset)(runningScheduleDate + schedulingPeriod);
-                            schedule[runningScheduleDate.ToString()] = scheduleWork;
-
-                            var comparingRes = runningScheduleDate.CompareTo(finalDateForPlanning);
-                            if (comparingRes > 0) break;
-
-                        } while (true);
-
-                        schedule = schedule.OrderBy(w => w.Key).ToDictionary(w => w.Key, w => w.Value);
-
-                        schedulesBySeriality[scheduleWork.Seriality] = schedule;
-
-                    }
-                    else
-                    {
-                        DateTimeOffset lastMaintDateTimeI = (DateTimeOffset)pair.Value;
-                        var readingValue = scheduleWork.ReadingsValue;
-                        
-                        TimeSpan schedulingPeriod = await GetPeriodByReadings(assetId, scheduleWork.ReadingTypeId, readingValue);
-                        if (schedulingPeriod == default) continue;
-
-                        var nextMaintDateTimeI = lastMaintDateTimeI.Add(schedulingPeriod);
-
-                        // Align with shortest works.
-                        var shortestWorksDates = schedulesBySeriality[minimalSeriality].Keys.ToArray();
-
-
-                        for (int i = 0; i < shortestWorksDates.Length - 1; i++)
-                        {
-                            var currDate = DateTimeOffset.Parse(shortestWorksDates[i]);
-                            var nextDate = DateTimeOffset.Parse(shortestWorksDates[i + 1]);
-
-                            if (nextMaintDateTimeI.CompareTo(currDate) >= 0
-                                    && nextMaintDateTimeI.CompareTo(nextDate) <= 0)
-                                break;
-                            var leftTimeSpan = nextMaintDateTimeI - currDate;
-                            var rightTimeSpan = nextDate - nextMaintDateTimeI;
-                            if (leftTimeSpan > rightTimeSpan)
-                            {
-                                nextMaintDateTimeI = nextDate;
-                            } else
-                            {
-                                nextMaintDateTimeI = currDate;
-                            }
-                        }
-
-                        Dictionary<string, ScheduledWork> schedule = new Dictionary<string, ScheduledWork>();
-                        DateTimeOffset runningScheduleDate = (DateTimeOffset)lastMaintDateTime;
-                        do
-                        {
-                            runningScheduleDate = (DateTimeOffset)(lastMaintDateTime + schedulingPeriod);
-                            schedule[runningScheduleDate.ToString()] = scheduleWork;
-
-                            var comparingRes = runningScheduleDate.CompareTo(finalDateForPlanning);
-                            if (comparingRes > 0) break;
-
-                        } while (true);
-
-                        schedule = schedule.OrderBy(w => w.Key).ToDictionary(w => w.Key, w => w.Value);
-
-                        schedulesBySeriality[scheduleWork.Seriality] = schedule;
-                    }
-                }
-
-                // Put all schedules in one. Go by the cycle with minimal periods.
-                // Replace schedule item with item which has the maximum seriality
-                var shortestCycle = schedulesBySeriality[minimalSeriality];
-                serialityList = serialityList.OrderBy(s => s).ToList();
-
-                Dictionary<string, ScheduledWork> combinedSchedule = new Dictionary<string, ScheduledWork>();
-
-                // Copy shortest cycle
-                foreach (var pair in shortestCycle)
-                {
-                    combinedSchedule[pair.Key] = pair.Value;
-                }
-
-                foreach (var pair in shortestCycle)
-                {
-                    for (int i = 1; i < serialityList.Count; i++)
-                    {
-                        var seriality = serialityList[i];
-                        var schedule = schedulesBySeriality[seriality];
-                        // Overwrite with schedule with the greatest seriality
-                        if (schedule.ContainsKey(pair.Key))
-                        {
-                            combinedSchedule[pair.Key] = schedule[pair.Key];
-                        }
-                    }
-                }
-
-                // Shift works on their durations.
-                // Get durations for each scheduled work.
-                Dictionary<ScheduledWork, double> durationByScheduleWork = new Dictionary<ScheduledWork, double>();
-                foreach (var pair in lastWorkDateDict)
-                {
-                    var woTemplateId = pair.Key.WOTemplateId;
-                    if (woTemplateId != null)
-                    {
-                        var orderDocument = await _orderDocumentDocWorkflowService.GetById((Guid)woTemplateId); // Вызов метода для получения шаблона РР
-                        var duration = orderDocument.ScheduledDuration;
-                        if (duration != null)
-                            durationByScheduleWork[pair.Key] = (double)duration;
-                        else
-                            durationByScheduleWork[pair.Key] = 0;
-                    }
-                }
-
-                Dictionary<string, ScheduledWork> shiftedSchedule = new Dictionary<string, ScheduledWork>();
-                foreach (var pair in combinedSchedule)
-                {
-                    var initialDateTime = DateTimeOffset.Parse(pair.Key);
-                    var shiftDuration = durationByScheduleWork[pair.Value];
-                    var shiftedDateTime = initialDateTime.AddDays(shiftDuration);
-                    shiftedSchedule[shiftedDateTime.ToString()] = pair.Value;
-                }
-
-                // Save to DB.
-                foreach (var pair in shiftedSchedule)
-                {
-                    var maintenanceSchedule = new MaintenanceSchedule
-                    {
-                        IsAutoGenerated = true,
-                        ScheduledWorkId = (Guid)pair.Value.Id,
-                        ScheduledDT = DateTimeOffset.Parse(pair.Key).LocalDateTime,
-                        CreateWOBefore = (int)pair.Value.PeriodCreateWOBefore,
-                        CreatedDT = DateTime.Now,
-                        TypeOfMaintenanceId = (Guid)pair.Value.TypeOfMaintenanceId,
-                        AssetId = (Guid)assetId,
-                        WorkScheduledDuration = durationByScheduleWork[pair.Value].ToString() + "d",
-                        WorkDocumentTemplateId = (Guid)pair.Value.WOTemplateId,
-                        AssetClassId = (Guid)pair.Value.AssetClassId,
-                    };
-                    await _repo.AddAsync(maintenanceSchedule);
-                }
-                await _unitOfWork.CommitAsync();
-
+                // Register asset in work list as processed
                 processedAssetGuids.Add(assetId);
             };
 
         }
 
+        private async Task RegisterResults(Guid assetId, Dictionary<string, ScheduledWork> shiftedSchedule, Dictionary<ScheduledWork, double> durationByScheduleWork)
+        {
+            // Save to DB.
+            foreach (var pair in shiftedSchedule)
+            {
+                var maintenanceSchedule = new MaintenanceSchedule
+                {
+                    IsAutoGenerated = true,
+                    ScheduledWorkId = (Guid)pair.Value.Id,
+                    ScheduledDT = DateTimeOffset.Parse(pair.Key).LocalDateTime,
+                    CreateWOBefore = (int)pair.Value.PeriodCreateWOBefore,
+                    CreatedDT = DateTime.Now,
+                    TypeOfMaintenanceId = (Guid)pair.Value.TypeOfMaintenanceId,
+                    AssetId = (Guid)assetId,
+                    WorkScheduledDuration = (durationByScheduleWork[pair.Value] / 60 / 24).ToString() + "d", // Duration in OrderDocument is in minutes
+                    WorkDocumentTemplateId = (Guid)pair.Value.WOTemplateId,
+                    AssetClassId = (Guid)pair.Value.AssetClassId,
+                };
+                await _repo.AddAsync(maintenanceSchedule);
+            }
+
+            // Register asset in ProcInfo table as processed
+
+            var procInfoByAsset = await _infrastructureEntities
+                                    .ScheduledWorkProInfos.Where(pi => pi.AssetId == assetId).ToArrayAsync();
+            foreach (var item in procInfoByAsset)
+            {
+                item.ProcResult = 1;
+                await _scheduledWorkProcInfosRepo.UpdateAsync(item);
+            }
+
+            await _unitOfWork.CommitAsync();
+        }
+
+        private async Task<(Dictionary<string, ScheduledWork>, Dictionary<ScheduledWork, double>)> BuildSchedule(Dictionary<ScheduledWork, DateTimeOffset?> lastWorkDateDict,
+                                        ScheduledWork lastMaintWork,
+                                        DateTimeOffset? lastMaintDateTime,
+                                        Guid assetId,
+                                        DateTimeOffset finalDateForPlanning
+                                        //,Dictionary<int, Dictionary<string, ScheduledWork>> schedulesBySeriality
+                                        )
+        {
+            Dictionary<int, Dictionary<string, ScheduledWork>> schedulesBySeriality =
+                new Dictionary<int, Dictionary<string, ScheduledWork>>();
+
+            Dictionary<string, ScheduledWork> shiftedSchedule = new Dictionary<string, ScheduledWork>();
+
+            // Build schedule from the lesser seriality to bigger.
+            lastWorkDateDict = lastWorkDateDict.OrderBy(w => w.Key.Seriality).ToDictionary(w => w.Key, w => w.Value);
+            int minimalSeriality = 0;
+            List<int> serialityList = new List<int>();
+
+            foreach (var pair in lastWorkDateDict)
+            {
+
+                var scheduleWork = pair.Key;
+                var seriality = scheduleWork.Seriality;
+                if (minimalSeriality == 0) minimalSeriality = seriality;
+                serialityList.Add(seriality);
+
+                if (seriality <= lastMaintWork.Seriality)
+                {
+                    // scheduleStartDateDict[scheduleWork] = lastMaintDateTime;
+                    TimeSpan schedulingPeriod = await GetPeriodByReadings(assetId
+                                                        , scheduleWork.ReadingTypeId
+                                                        , scheduleWork.ReadingsValue
+                                                        );
+                    if (schedulingPeriod == default) continue;
+
+                    Dictionary<string, ScheduledWork> schedule = new Dictionary<string, ScheduledWork>();
+                    DateTimeOffset runningScheduleDate = (DateTimeOffset)lastMaintDateTime;
+                    if(runningScheduleDate.CompareTo(DateTimeOffset.MinValue) == 0)
+                    {
+                        // No maintenance yet
+                        runningScheduleDate = DateTimeOffset.Now;
+                    }
+
+                    do
+                    {
+                        runningScheduleDate = (DateTimeOffset)(runningScheduleDate + schedulingPeriod);
+                        schedule[runningScheduleDate.ToString()] = scheduleWork;
+
+                        var comparingRes = runningScheduleDate.CompareTo(finalDateForPlanning);
+                        if (comparingRes > 0) break;
+
+                    } while (true);
+
+                    // schedule = schedule.OrderBy(w => w.Key).ToDictionary(w => w.Key, w => w.Value);
+
+                    schedulesBySeriality[scheduleWork.Seriality] = schedule;
+
+                }
+                else
+                {
+                    DateTimeOffset lastMaintDateTimeI = (DateTimeOffset)pair.Value;
+
+                    if(lastMaintDateTimeI.CompareTo(DateTimeOffset.MinValue) == 0)
+                    {
+                        lastMaintDateTimeI = DateTimeOffset.Now;
+                    }
+
+                    var readingValue = scheduleWork.ReadingsValue;
+
+                    TimeSpan schedulingPeriod = await GetPeriodByReadings(assetId, scheduleWork.ReadingTypeId, readingValue);
+                    if (schedulingPeriod == default) continue;
+
+                    var nextMaintDateTimeI = lastMaintDateTimeI.Add(schedulingPeriod);
+
+                    // Align with shortest works.
+                    var shortestWorksDates = schedulesBySeriality[minimalSeriality]
+                                                .Keys
+                                                .Select(i => DateTimeOffset.Parse(i))
+                                                .OrderBy(d => d)
+                                                .ToArray();
 
 
-        // await LastScheduledWorkFromJournal(); // Вызов метода для обработки списка оборудования в цикле
+                    int i = 0;
+                    if (shortestWorksDates.Length <= 1) continue; // Protection. There should not be so in real life.
+                    DateTimeOffset currDate = default;
+                    DateTimeOffset nextDate = default;
+
+                    while(i < shortestWorksDates.Length - 1)
+                    {
+                        currDate = shortestWorksDates[i];
+                        nextDate = shortestWorksDates[i + 1];
+
+                        if (nextMaintDateTimeI.CompareTo(currDate) >= 0
+                                && nextMaintDateTimeI.CompareTo(nextDate) <= 0)
+                            break;
+                        i++;
+                    }
+
+                    // Round to nearest short cycle period boarder
+                    var leftTimeSpan = nextMaintDateTimeI - currDate;
+                    var rightTimeSpan = nextDate - nextMaintDateTimeI;
+                    if (leftTimeSpan > rightTimeSpan)
+                    {
+                        nextMaintDateTimeI = nextDate;
+                    }
+                    else
+                    {
+                        nextMaintDateTimeI = currDate;
+                    }
+
+                    Dictionary<string, ScheduledWork> schedule = new Dictionary<string, ScheduledWork>();
+                    DateTimeOffset runningScheduleDate = (DateTimeOffset)nextMaintDateTimeI;
+                    schedule[runningScheduleDate.ToString()] = scheduleWork;
+                    while(runningScheduleDate.CompareTo(finalDateForPlanning) <= 0)
+                    {
+                        runningScheduleDate = (DateTimeOffset)(runningScheduleDate + schedulingPeriod);
+                        schedule[runningScheduleDate.ToString()] = scheduleWork;
+                    };
+
+                    // schedule = schedule.OrderBy(w => w.Key).ToDictionary(w => w.Key, w => w.Value);
+
+                    schedulesBySeriality[scheduleWork.Seriality] = schedule;
+                }
+            }
+
+            // Put all schedules in one. Go by the cycle with minimal periods.
+            // Replace schedule item with item which has the maximum seriality
+
+            if (schedulesBySeriality.Count == 0) return (shiftedSchedule, null);
+
+            var shortestCycle = schedulesBySeriality[minimalSeriality];
+            serialityList = serialityList.OrderBy(s => s).ToList();
+
+            Dictionary<string, ScheduledWork> combinedSchedule = new Dictionary<string, ScheduledWork>();
+
+            // Copy shortest cycle
+            foreach (var pair in shortestCycle)
+            {
+                combinedSchedule[pair.Key] = pair.Value;
+            }
+
+            foreach (var pair in shortestCycle)
+            {
+                for (int i = 1; i < serialityList.Count; i++)
+                {
+                    var seriality = serialityList[i];
+                    var schedule = schedulesBySeriality[seriality];
+                    // Overwrite with schedule with the greatest seriality
+                    if (schedule.ContainsKey(pair.Key))
+                    {
+                        combinedSchedule[pair.Key] = schedule[pair.Key];
+                    }
+                }
+            }
+
+            var durationByScheduleWork = await GetDurationsByScheduleWork(lastWorkDateDict);
+
+            
+            foreach (var pair in combinedSchedule)
+            {
+                var initialDateTime = DateTimeOffset.Parse(pair.Key);
+                var shiftDuration = durationByScheduleWork[pair.Value];
+                var shiftedDateTime = initialDateTime.AddMinutes(shiftDuration);
+                shiftedSchedule[shiftedDateTime.ToString()] = pair.Value;
+            }
+            return (shiftedSchedule, durationByScheduleWork);
+        }
+
+         private async Task<Dictionary<ScheduledWork, double>> GetDurationsByScheduleWork(Dictionary<ScheduledWork, DateTimeOffset?> lastWorkDateDict)
+         {
+            // Shift works on their durations.
+            // Get durations for each scheduled work.
+            Dictionary<ScheduledWork, double> durationByScheduleWork = new Dictionary<ScheduledWork, double>();
+            foreach (var pair in lastWorkDateDict)
+            {
+                var woTemplateId = pair.Key.WOTemplateId;
+                if (woTemplateId != null)
+                {
+                    var orderDocument = await _orderDocumentDocWorkflowService.GetById((Guid)woTemplateId); // Вызов метода для получения шаблона РР
+                    var duration = orderDocument.ScheduledDuration;
+                    if (duration != null)
+                        durationByScheduleWork[pair.Key] = (double)duration;
+                    else
+                        durationByScheduleWork[pair.Key] = 0;
+                }
+            }
+
+            return durationByScheduleWork;
+         }
         
+
+        private async Task<Dictionary<ScheduledWork, DateTimeOffset?>> GetLastMaitenances(Guid assetId, List<ScheduledWorkProInfos> worksInfoForAsset)
+        {
+            Dictionary<ScheduledWork, DateTimeOffset?> lastWorkDateDict = new Dictionary<ScheduledWork, DateTimeOffset?>();
+
+            // Looking for the last accomplished work
+            foreach (var work in worksInfoForAsset)
+            {
+                var scheduleWork = await _infrastructureEntities
+                    .ScheduledWorks
+                    .Where(sw => sw.Id == work.ScheduledWorkId)
+                    .FirstOrDefaultAsync();
+
+                // Get last maintenance from the maintenance journal
+                var lastMaintenance = await _infrastructureEntities.EqMaintJournal
+                    .Where(x => x.ScheduledWorkId == work.ScheduledWorkId && x.AssetId == assetId)
+                    .OrderByDescending(x => x.MaintDoneDateTime)
+                    //.Select(x => x.ScheduledWorkId)
+                    //.Distinct()
+                    .FirstOrDefaultAsync();
+
+                if (lastMaintenance != null)
+                {
+                    lastWorkDateDict[scheduleWork] = lastMaintenance.MaintDoneDateTime;
+                }
+                else
+                {
+                    // No maintenance yet
+                    lastWorkDateDict[scheduleWork] = DateTimeOffset.MinValue;
+                }
+
+            }
+
+            return lastWorkDateDict;
+        }
 
         private async Task<TimeSpan> GetPeriodByReadings(Guid assetId, Guid? readingTypeId, double readingValue)
         {
@@ -536,6 +618,9 @@ namespace InfrastructureAppCore.Service
 
             var readingDiff = Double.Parse(currReading.Value) - Double.Parse(oldReading.Value);
             var periodSpanInDays = (currReading.OccuredAt - oldReading.OccuredAt).Days;
+
+            if (periodSpanInDays == 0) return result; // the only value. Cannot calculate daily reading
+
             var dailyReading = readingDiff / periodSpanInDays;
             result = TimeSpan.FromDays(readingValue / dailyReading);
 
